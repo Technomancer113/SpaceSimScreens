@@ -9,6 +9,7 @@ h1, h2, h3, p {
 	color: #dddddd;
 }
 
+/* Currently unused
 .bubble {
 	background-color: #162530;
 	opacity: 0.95;
@@ -16,9 +17,12 @@ h1, h2, h3, p {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+*/
 
+/* Currently unused
 .responsive {
   max-width: 100%;
   width: auto;
   height: auto;
 }
+*/
