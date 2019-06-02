@@ -1,0 +1,19 @@
+body {
+	background-color: #142028;
+	background-image: url("resources/BackgroundCrosses.png");
+	text-align: center;
+}
+
+.bubble {
+	background-color: #162530;
+	opacity: 0.95;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.responsive {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
