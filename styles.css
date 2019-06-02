@@ -2,6 +2,9 @@ body {
 	background-color: #142028;
 	background-image: url("resources/BackgroundCrosses.png");
 	text-align: center;
+}
+
+p {
 	color: #dddddd;
 }
 
