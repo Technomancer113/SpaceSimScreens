@@ -1,11 +1,8 @@
 body {
 	background-color: #142028;
+	color: #dddddd;
 	background-image: url("resources/BackgroundCrosses.png");
 	text-align: center;
-}
-
-p {
-	color: #dddddd;
 }
 
 .bubble {
