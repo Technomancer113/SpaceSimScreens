@@ -1,23 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <title>Transporter</title>
-<link rel="stylesheet" href="styles.css">
+<!--CURRENTLY UNUSED: <link rel="stylesheet" href="styles.css">-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 
-<body>	
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+  	background-color: #142028;
+  	color: #dddddd;
+  	background-image: url("resources/BackgroundCrosses.png");
+    text-align: center;
+  }
+  h1, h2, h3, p {
+  	color: #dddddd;
+  }
+
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  .round {
+    border-radius: 10px;
+  }
+
+  .tall {
+    height: auto;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+  }
+/*
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  */
+</style>
+
+</head>
+<body>
   <h1>Transporter System</h1>
-  <div id="tp-table-container">
-    <table border=5px>
-      <tr>
-        <td>Target Scanner</td><td>Destination Scanner</td>
-      </tr>
-      <tr>
-        <td id="target-scanner">test</td><td id="destination-scanner">test</td>
-      </tr>
-    </table>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+
+    </div>
+    <div class="col-2"></div>
   </div>
+
+  <script>
+    var myGamePiece;
+
+    function startGame() {
+        myGameArea.start();
+        myGamePiece = new component(30, 30, "red", 10, 120);
+    }
+
+    function component(width, height, color, x, y) {
+        this.width = width;
+        this.height = height;
+        this.x = x;
+        this.y = y;
+        ctx = myGameArea.context;
+        ctx.fillStyle = color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+
+    var myGameArea = {
+        canvas : document.createElement("canvas"),
+        start : function() {
+            this.canvas.width = 480;
+            this.canvas.height = 270;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        }
+    }
+  </script>
+
 </body>
 </html>
