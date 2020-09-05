@@ -5,7 +5,7 @@ $(document).ready(function() {
     
     var shieldsActive = false;
 
-    $("button").on("click", function(event) {
+    $("#shields-button").on("click", function(event) {
         alert("Button clicked");
         shieldsActive = !shieldsActive;
         let command = "setShieldsActive("+shieldsActive+")";
